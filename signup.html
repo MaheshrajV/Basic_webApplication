@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Create Account</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="welcome-login-page"> 
+
+  <div class="login-split-container">
+    
+    <div class="welcome-panel">
+      
+      <div class="logo-section">
+        <svg class="main-logo-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
+        </svg>
+        <span class="logo-text">SIGN UP</span>
+      </div>
+      
+      <div class="welcome-content">
+        <h1>Start Your<br>Creative Journey..!</h1>
+        <p>Register to unlock new possibilities and features.</p>
+      </div>
+
+      <div class="website-info">
+        www.creativity.com
+      </div>
+      
+      <div class="circle-decoration circle-1"></div>
+      <div class="circle-decoration circle-2"></div>
+      <div class="circle-decoration circle-3"></div>
+    </div>
+
+    <div class="login-form-panel">
+      <div class="login-box">
+        <p>Enter your details to create an account.</p>
+
+        <form id="signupForm">
+          
+          <label for="signupName">Full Name</label>
+          <input type="text" id="signupName" placeholder="" required>
+          
+          <label for="signupEmail">Email Address</label>
+          <input type="email" id="signupEmail" placeholder="" required>
+          
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" placeholder="" required>
+          
+          <button type="submit" class="continue-button">REGISTER <span class="arrow">&gt;</span></button>
+        </form>
+        
+        <p class="social-text">or Connect with Social Media</p>
+        <button class="social-button facebook">
+          <img src="images/fb.png" alt="Facebook Icon"> Sign Up With Facebook
+        </button>
+        
+        <p class="signup-text">Already have an account? <a href="index.html">Login Here</a></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("signupName").value;
+      const email = document.getElementById("signupEmail").value;
+      const pass = document.getElementById("signupPassword").value;
+
+      // Basic local storage save (for demo purposes)
+      localStorage.setItem("username", name); // Using email as the login username
+      localStorage.setItem("password", pass);
+      localStorage.setItem("name", email); 
+
+      alert("Account created successfully for " + name + "! You can now log in.");
+      window.location.href = "index.html"; // Redirect to your login page
+    });
+  </script>
+</body>
+</html>
