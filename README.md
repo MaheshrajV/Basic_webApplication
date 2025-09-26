@@ -1,4 +1,6 @@
 🌐 Creative Solutions Web Dashboard
+
+
 Project Overview
 This is a multi-page static website template featuring a modern, responsive landing page (Home/Dashboard) and a stylish, two-column user authentication flow (Sign Up and Login). The design incorporates modern CSS techniques like Flexbox, Sticky Navigation, and gradient backgrounds for a contemporary user experience.
 
